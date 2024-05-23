@@ -1,6 +1,7 @@
 {
-    "translation": {
-      "welcome": "Bienvenido",
-      "change_language": "Cambiar idioma"
-    }
+  "translation": {
+    "welcome": "Welcome",
+    "see_in_english": "Ver en inglés",
+    "see_in_spanish": "Ver en español"
   }
+}

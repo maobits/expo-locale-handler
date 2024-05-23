@@ -1,48 +1,52 @@
 # React Native Translation Control Demo
 
-This demo project allows controlling translations in a React Native application. It utilizes the `i18next` library for internationalization and provides a language switcher to toggle between English and Spanish.
+Este proyecto de demostración permite controlar las traducciones en una aplicación React Native. Utiliza la biblioteca `i18next` para la internacionalización y proporciona un selector de idioma para alternar entre inglés y español.
 
-## Installation
+## Instalación
 
-Follow these steps to run the application in your local environment:
+Siga estos pasos para ejecutar la aplicación en su entorno local:
 
-1. **Clone the Repository**: Clone this repository to your local machine using the following command:
+1. **Clonar el Repositorio**: Clone este repositorio en su máquina local utilizando el siguiente comando:
 
    ```bash
    git clone https://github.com/maobits/expo-locale-handler.git
    ```
 
-2. **Install Dependencies**: Navigate to the project directory and run the following command to install all dependencies:
+2. **Instalar Dependencias**: Navegue hasta el directorio del proyecto y ejecute el siguiente comando para instalar todas las dependencias:
 
    ```bash
    cd expo-locale-handler.git
-   npm install
+   npm install expo-secure-store i18next intl-pluralrules react-i18next
    ```
 
-3. **Run the Application**: Once installations are complete, you can run the application on an emulator or connected device. Use the following command:
+3. **Ejecutar la Aplicación**: Una vez que las instalaciones estén completas, puede ejecutar la aplicación en un emulador o dispositivo conectado. Utilice el siguiente comando:
 
    ```bash
    npm start
    ```
 
-   This will start the Expo development server and provide you with options to run the application on an emulator, physical device, or web.
+   Esto iniciará el servidor de desarrollo de Expo y le proporcionará opciones para ejecutar la aplicación en un emulador, dispositivo físico o web.
 
-## Usage
+## Uso
 
-Once the application is up and running, you'll see a welcome screen with a button to switch between English and Spanish. Clicking on either of the buttons will change the language of the application according to the selection.
+Una vez que la aplicación esté en funcionamiento, verá una pantalla de bienvenida con un botón para alternar entre inglés y español. Hacer clic en cualquiera de los botones cambiará el idioma de la aplicación según la selección.
 
-## Demo
+## Demostración
 
-### English
-![English Demo](https://i.ibb.co/Ss4Xxzc/expo-locale-handler-demo-en.jpg)
+### Inglés
+![Demostración en Inglés](https://i.ibb.co/Ss4Xxzc/expo-locale-handler-demo-en.jpg)
 
-### Spanish
-![Spanish Demo](https://i.ibb.co/tMTV94C/expo-locale-handler-demo-es.jpg)
+### Español
+![Demostración en Español](https://i.ibb.co/tMTV94C/expo-locale-handler-demo-es.jpg)
 
-## Credits
+## Video Explicativo
 
-This project was developed by Maobits LLC. as part of the Mobile Application Development Department. The department head is Mauricio Chara Hurtado (@maurollc). You can reach out to the support team at code@maobits.com. Contact information [www.maobits.com](www.maobits.com).
+[![Video Explicativo](https://i.ibb.co/n6wSCqG/pantallazo-video-explicativo-i18n-react-native.png)](https://www.youtube.com/watch?v=Zw-CbxtQHyk&t=509s)
 
-## License
+## Créditos
 
-This project is licensed under the CC0 1.0 Universal (CC0 1.0) - Public Domain Dedication. For more details, refer to the LICENSE.md file included in the repository.
+Este proyecto fue desarrollado por Maobits LLC. como parte del Departamento de Desarrollo de Aplicaciones Móviles. El jefe de departamento es Mauricio Chara Hurtado (@maurollc). Puede comunicarse con el equipo de soporte en code@maobits.com. Información de contacto [www.maobits.com](www.maobits.com).
+
+## Licencia
+
+Este proyecto está licenciado bajo CC0 1.0 Universal (CC0 1.0) - Public Domain Dedication. Para obtener más detalles, consulte el archivo LICENSE.md incluido en el repositorio.
