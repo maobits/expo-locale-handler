@@ -34,10 +34,10 @@ Una vez que la aplicación esté en funcionamiento, verá una pantalla de bienve
 ## Demostración
 
 ### Inglés
-![Demostración en Inglés](https://i.ibb.co/Ss4Xxzc/expo-locale-handler-demo-en.jpg)
+![English Demo](https://i.ibb.co/GvGbfFW/screenshot-expo-locale-handler-e-es.jpg)
 
 ### Español
-![Demostración en Español](https://i.ibb.co/tMTV94C/expo-locale-handler-demo-es.jpg)
+![Spanish Demo](https://i.ibb.co/GvGbfFW/screenshot-expo-locale-handler-e-es.jpg)
 
 ## Video Explicativo
 
