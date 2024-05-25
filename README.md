@@ -37,7 +37,7 @@ Once the application is up and running, you'll see a welcome screen with a butto
 ![English Demo](https://i.ibb.co/GvGbfFW/screenshot-expo-locale-handler-e-en.jpg)
 
 ### Spanish
-![Spanish Demo](https://i.ibb.co/GvGbfFW/screenshot-expo-locale-handler-e-es.jpg)
+![Spanish Demo](https://i.ibb.co/2n3nrzk/screenshot-expo-locale-handler-e-es.jpg)
 
 ## Explainer Video
 
