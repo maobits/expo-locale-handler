@@ -1,7 +1,9 @@
 {
   "translation": {
-    "welcome": "Welcome",
+    "welcome": "Bienvenido",
     "see_in_english": "Ver en inglés",
-    "see_in_spanish": "Ver en español"
+    "see_in_spanish": "Ver en español",
+    "language_settings_title": "Configurar el idioma.",
+    "language_settings_subtitle": "Aplicación multilingüe"
   }
 }

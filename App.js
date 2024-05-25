@@ -45,7 +45,8 @@ import { View, Text, ActivityIndicator } from 'react-native'; // Import necessar
 import 'intl-pluralrules'; // Import intl-pluralrules library for pluralization support
 import { I18nextProvider } from 'react-i18next'; // Import I18nextProvider from react-i18next for internationalization
 import { i18n, initI18n } from './i18n'; // Import i18n instance and initI18n function from './i18n' file
-import Main from './screens/Main'; // Import Main component from './screens/Main' file
+import Main from './screens/ScreenLanguageSettings'; // Import Main component from './screens/Main' file
+import ScreenLanguageSettings from './screens/ScreenLanguageSettings';
 
 export default function App() {
   const [isInitialized, setIsInitialized] = useState(false); // State to track if initialization is complete
@@ -71,7 +72,7 @@ export default function App() {
   // Once initialization is complete, render the Main component wrapped with I18nextProvider
   return (
     <I18nextProvider i18n={i18n}>
-      <Main />
+      <ScreenLanguageSettings />
     </I18nextProvider>
   );
 }

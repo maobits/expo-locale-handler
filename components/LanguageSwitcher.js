@@ -9,11 +9,11 @@
  *  Web: www.maobits.com
  *  Version: 1.0.0
  *  Creation Date: May 23, 2024
- *  Last Update Date: May 23, 2024
+ *  Last Update Date: May 24, 2024
  *  License: CC0 1.0 Universal (CC0 1.0) Public Domain Dedication
  *  Support: code@maobits.com
- *  Last commit message: Implementation of loading translations from external JSON.
- *  Last commit date: May 21, 2024  
+ *  Last commit message: Added ScreenLanguageSettings component for language settings screen.
+ *  Last commit date: May 24, 2024  
  * ====================================================
  */
 
@@ -38,40 +38,90 @@
  * Note: This component assumes the existence of a translation resource file
  * containing keys for 'see_in_spanish' and 'see_in_english'.
  */
-
-
 import React from 'react';
-import { View, Button, StyleSheet } from 'react-native';
-import { useTranslation } from 'react-i18next';
-import { changeLanguage } from '../i18n';
+import { View, TouchableOpacity, Image, StyleSheet, FlatList, Text, Dimensions } from 'react-native';
+import { useTranslation } from 'react-i18next'; // Import translation hook
+import { changeLanguage } from '../i18n'; // Import function to change language
 
-// Component for language switching
+// List of languages with their respective flags and codes
+const languages = [
+  { code: 'es', name: 'Español', flag: require('../assets/flags-icons/spain_icon.png') }, // Spanish language with its flag
+  { code: 'en', name: 'English', flag: require('../assets/flags-icons/usa_icon.png') }, // English language with its flag
+  // Add more languages here
+];
+
+// Get the screen width
+const screenWidth = Dimensions.get('window').width;
+
+// Component for language switching with a list of flags
 const LanguageSwitcher = () => {
-  const { t } = useTranslation(); // Hook to access translation functions
+  const { t } = useTranslation(); // Translation hook
 
   return (
-    <View style={styles.buttonContainer}>
-      {/* Button to switch language to Spanish */}
-      <Button title={t('see_in_spanish')} onPress={() => changeLanguage('es')} />
-      <View style={styles.spacer} />
-      {/* Button to switch language to English */}
-      <Button title={t('see_in_english')} onPress={() => changeLanguage('en')} />
+    // Render a View container with styles defined in the 'container' style object
+    <View style={styles.container}>
+      {/* 
+        Render a FlatList component to display the list of languages.
+        - The 'data' prop is set to the 'languages' array, which contains language objects.
+        - The 'keyExtractor' prop extracts the unique key for each item from its 'code' property.
+        - The 'renderItem' prop defines how each item in the list should be rendered.
+          It renders a TouchableOpacity for each language:
+            - When pressed, it calls the 'changeLanguage' function with the language code.
+            - It contains an Image component to display the flag of the language.
+            - It contains a Text component to display the name of the language.
+        - The 'ItemSeparatorComponent' prop renders a separator between each item in the list.
+          It renders a View component with styles defined in the 'separator' style object.
+      */}
+      <FlatList
+        data={languages}
+        keyExtractor={(item) => item.code}
+        renderItem={({ item }) => (
+          <TouchableOpacity onPress={() => changeLanguage(item.code)} style={styles.button}>
+            <Image source={item.flag} style={styles.flag} />
+            <Text style={styles.languageName}>{item.name}</Text>
+          </TouchableOpacity>
+        )}
+        ItemSeparatorComponent={() => <View style={styles.separator} />}
+      />
     </View>
   );
+
 };
 
 // Styles for the component
 const styles = StyleSheet.create({
-  buttonContainer: {
-    flexDirection: 'row', // Arrange buttons horizontally
-    justifyContent: 'space-around', // Evenly space buttons
-    width: '100%', // Occupy full width
-    maxWidth: 300, // Limit maximum width to 300
-    marginTop: 20 // Margin on top
+  container: {
+    width: '100%',
   },
-  spacer: {
-    width: 10 // Empty space between buttons
-  }
+  button: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 10,
+    backgroundColor: '#ffffffaa',
+    borderRadius: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    elevation: 5,
+    width: screenWidth * 0.8, // Adjust button width to fit content
+    maxWidth: 300, // Max width to prevent overflow on larger screens
+    marginHorizontal: 'auto', // Center buttons horizontally
+  },
+  flag: {
+    width: 40,
+    height: 30,
+    resizeMode: 'contain',
+    marginRight: 10,
+  },
+  languageName: {
+    fontSize: 16,
+    color: '#333',
+    flexShrink: 1, // Ensure text does not overflow
+  },
+  separator: {
+    height: 10,
+  },
 });
 
 export default LanguageSwitcher; // Export the component

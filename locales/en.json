@@ -1,7 +1,9 @@
 {
-    "translation": {
-      "welcome": "Welcome",
-      "see_in_english": "See in english",
-      "see_in_spanish": "See in Spanish"
-    }
+  "translation": {
+    "welcome": "BienvenidoWelcome",
+    "see_in_english": "See in English",
+    "see_in_spanish": "See in Spanish",
+    "language_settings_title": "Set the language.",
+    "language_settings_subtitle": "Multilingual application"
   }
+}
